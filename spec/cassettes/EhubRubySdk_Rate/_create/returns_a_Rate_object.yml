@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.essentialhub.com/api/v2/rates
+    body:
+      encoding: UTF-8
+      string: '{"shipment":{"to_location":{"company":"","first_name":"Kevin","last_name":"Shaw","nick_name":"Kev","address1":"1025
+        SANSOME ST","address2":"","address3":"","city":"SAN FRANCISCO","state":"CA","country":"US","postal_code":"94111","phone":"4156565367","email":"kevin.shaw@gmail.com"},"from_location":{"company":"Touch
+        of Modern LLC","first_name":"Shipping","last_name":"Team","nick_name":"","address1":"901
+        E NORTHFIELD DR","address2":"","address3":"","city":"BROWNSBURG","state":"IN","country":"US","postal_code":"46112","phone":"4152300750","email":"support@touchofmodern.com"},"parcels":[{"length":5,"width":5,"height":5,"weight":16,"package_type":"parcel"}]},"show_all_services":true}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyABC123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 14 Aug 2023 22:17:20 GMT
+      Server:
+      - Goliath
+      Vary:
+      - Origin,Accept
+      Content-Length:
+      - '1032'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"service_rates":[{"service":"Priority Mail Express","service_id":685,"service_code":"usps_express","carrier_code":"usps","rate":44.6,"rate_details":[{"cost_type":"std","description":null,"rate":44.6}],"meter_rate":44.6,"meter_rate_details":[{"cost_type":"std","description":null,"rate":44.6}],"retail_rate":51.65,"std_rates":null,"errors":null,"delivery_days":2,"min_delivery_days":null,"max_delivery_days":null,"delivery_date":"2023-08-16","delivery_guaranteed":false,"rate_calc_type":["standard"],"price_group":"8"},{"service":"Priority
+        Mail","service_id":684,"service_code":"usps_priority","carrier_code":"usps","rate":10.07,"rate_details":[{"cost_type":"std","description":null,"rate":10.07}],"meter_rate":10.07,"meter_rate_details":[{"cost_type":"std","description":null,"rate":10.07}],"retail_rate":12.55,"std_rates":null,"errors":null,"delivery_days":2,"min_delivery_days":null,"max_delivery_days":null,"delivery_date":"2023-08-16","delivery_guaranteed":false,"rate_calc_type":["standard"],"price_group":"8"}],"warnings":[]}'
+  recorded_at: Mon, 14 Aug 2023 22:17:20 GMT
+recorded_with: VCR 6.0.0
