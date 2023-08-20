@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.essentialhub.com/api/v2/shipments/ship
+    body:
+      encoding: UTF-8
+      string: '{"shipment":{"order_id":"12345678","account_reference":"customer1","to_location":{"company":"Muley
+        Freak","first_name":"Muley Freak","address1":"1069 Stewart Dr. ST 8","city":"Ogden","state":"UT","country":"US","postal_code":"84404","phone":"000-000-0000"},"from_location":{"company":"Muley
+        Freak","first_name":"Muley Freak","address1":"1069 Stewart Dr. ST 8","city":"Ogden","state":"UT","country":"US","postal_code":"84404","phone":"000-000-0000"},"parcels":[{"length":8.0,"width":8.0,"height":7.0,"weight":13.0,"package_type":"parcel","parcel_items":[{"id":1877,"item_id":"823","name":"Muley
+        Freak Wrist Band","weight":1.0,"quantity":1.0,"price":1.0,"cost":6.743333333333333,"customs_data":{"content_type":"merchandise","no_delivery":"return","value":1.0}}],"customs_data":{"content_type":"merchandise","no_delivery":"return","value":1.01}}],"service_id":683,"label_size":"4x6","label_format":"pdf"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyABC123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 14 Aug 2023 23:18:05 GMT
+      Server:
+      - Goliath
+      Vary:
+      - Origin,Accept
+      Content-Length:
+      - '3225'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"shipment":{"id":112742377,"external_id":"shp_141a335b04d243bbb70f81fad34013bf","order_id":"12345678","account_reference":"customer1","batch_id":null,"pickup_id":null,"to_location":{"external_id":null,"company":"Muley
+        Freak","first_name":"Muley Freak","last_name":null,"nick_name":null,"address1":"1069
+        Stewart Dr. ST 8","address2":null,"address3":null,"city":"Ogden","state":"UT","country":"US","postal_code":"84404","phone":"000-000-0000","email":null},"from_location":{"external_id":null,"company":"Muley
+        Freak","first_name":"Muley Freak","last_name":null,"nick_name":null,"address1":"1069
+        Stewart Dr. ST 8","address2":null,"address3":null,"city":"Ogden","state":"UT","country":"US","postal_code":"84404","phone":"000-000-0000","email":null},"return_location":{"external_id":null,"company":"Muley
+        Freak","first_name":"Muley Freak","last_name":null,"nick_name":null,"address1":"1069
+        Stewart Dr. ST 8","address2":null,"address3":null,"city":"Ogden","state":"UT","country":"US","postal_code":"84404","phone":"000-000-0000","email":null},"parcels":[{"id":133931924,"length":8.0,"width":8.0,"height":7.0,"weight":13.0,"package_type":"parcel","created_at":"2023-08-14T23:18:05.000Z","updated_at":"2023-08-14T23:18:05.000Z","external_shipment_id":"shp_141a335b04d243bbb70f81fad34013bf","tracking_number":"9400100105440254178108","shipping_cost":5.85,"shipping_cost_details":[{"cost_type":"std","description":null,"rate":5.85}],"meter_cost":5.85,"meter_cost_details":[{"cost_type":"std","description":null,"rate":5.85}],"status":"shipped","parcel_items":[{"id":23971323,"item_id":null,"name":"Muley
+        Freak Wrist Band","accounting_number":null,"variant_name":null,"variant_id":null,"variant_option1":null,"variant_option2":null,"variant_option3":null,"image_src":null,"external_id":null,"sku":null,"weight":1.0,"length":null,"width":null,"height":null,"quantity":1.0,"price":1.0,"cost":6.7433,"country_of_origin":null,"customs_data":{"content_type":"merchandise","no_delivery":"return","hs_tariff_code":null,"value":"1.0","eel_pfc":null}}],"customs_data":{"content_type":"merchandise","no_delivery":"return","hs_tariff_code":null,"value":"1.01","eel_pfc":null},"postage_label":{"id":112325425,"dims":"4x6","resolution":300,"status":"active","image_url":"https://ehub-prod.s3.amazonaws.com/public/files/label_images/20230814/31f6065d-b5ff-4b3d-862b-e213f7c07b43.pdf","created_at":"2023-08-14T23:18:05.000Z","updated_at":"2023-08-14T23:18:05.000Z","base64_image":null},"ship_date":"2023-08-14","shipped_at":"2023-08-14T23:18:05.000Z","description":null,"service_options":null,"tracking_info":{"status":"unknown","updated_at":null,"estimated_delivery_date":null,"delivery_date":null,"tracking_events":[]},"rate_calc_type":"standard"}],"status":"shipped","shipping_service":{"service":"First
+        Class Mail","service_id":683,"service_code":"usps_first_class","carrier_code":"usps","rate":5.85,"meter_rate":5.85,"delivery_days":null,"delivery_date":"2023-08-16T00:00:00.000Z","delivery_guaranteed":false},"tracking_number":"9400100105440254178108","shipped_at":"2023-08-14T23:18:05.000Z","created_at":"2023-08-14T23:18:05.000Z","updated_at":"2023-08-14T23:18:05.000Z","label_text1":null,"label_text2":null,"price_group":"1"},"payment":null}'
+  recorded_at: Mon, 14 Aug 2023 23:18:05 GMT
+recorded_with: VCR 6.0.0
