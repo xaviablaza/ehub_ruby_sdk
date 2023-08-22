@@ -159,5 +159,10 @@ module EhubRubySdk
       @payment = payment
     end
     attr_reader :shipment, :payment
+
+    def image_url
+      response = HTTParty.get(shipment[:parcels][0][:postage_label][:image_url])
+      response.body
+    end
   end
 end
